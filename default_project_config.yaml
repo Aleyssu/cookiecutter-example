@@ -1,0 +1,28 @@
+# Use the '--config-file' argument to use this config
+
+# Changes the default arguments of the template
+default_context:
+    "include_propositional_logic_modelling_support" : "y"
+    "project_name" : "{{ cookiecutter.course_code }} Modelling Project"
+    
+# Directory where your cookiecutters are cloned 
+# to when you use Cookiecutter with a repo argument.
+cookiecutters_dir: "/home/downloads"
+
+# Directory where Cookiecutter dumps context data to, 
+# which you can fetch later on when using the replay feature.
+replay_dir: "/home/downloads"
+
+# Use instead of the full path to the template
+#
+# As opposed to: 
+# cookiecutter --config-file default_config.yaml https://github.com/Aleyssu/example-cookiecutter
+#
+# you can do:
+# cookiecutter --config-file default_config.yaml gh:Aleyssu/example-cookiecutter
+#
+# or:
+# cookiecutter --config-file default_config.yaml pp
+abbreviations:
+    pp: https://github.com/Aleyssu/example-cookiecutter
+    gh: https://github.com/{0}.git

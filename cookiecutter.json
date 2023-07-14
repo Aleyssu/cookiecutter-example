@@ -1,0 +1,14 @@
+{
+	"course_code": "CISC-804",
+	"project_name": "{{ cookiecutter.course_code }} Project",
+	"project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '') }}",
+	"university_name": "Unknown University",
+	"author_name": "Unnamed",
+	"year": "{% now 'utc', '%Y' %}",
+	
+	"include_propositional_logic_modelling_support": ["n", "y"],
+	"include_documentation_templates": ["word", "latex", "both"],
+	"include_static_type_checking_support": ["none", "mypy", "pytype"],
+	"include_string_markup_support": ["none", "sty", "chalky"],
+	"include_linting_support": ["none", "pylint", "flake8"]
+}

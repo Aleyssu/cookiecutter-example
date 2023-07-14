@@ -1,0 +1,83 @@
+
+
+\documentclass[pdftex,10pt,a4paper]{article}
+%Can change the pt, papersize etc.
+
+\usepackage{amsmath} %For both in-line and equation mode
+\numberwithin{equation}{section} %Numbering of our equations per section
+\usepackage{algorithm}
+\usepackage{algorithmic} %Algorithm styles, need to be nested for the example shown
+\usepackage{fancyhdr} %For our headers
+\usepackage{graphicx} %Inserting images
+\usepackage{lipsum}  %Blank text fill, delete me when finished
+\usepackage{setspace} %Spacing on the front page for crest and titles
+\usepackage[]{fncychap} % Styles can be Sonny, Lenny, Glenn, Conny, Rejne, Bjarne and Bjornstrup
+\usepackage[hyphens]{url} %Deals with hyphens in urls to make them clickable
+\usepackage{xcolor} %Great if you want coloured text
+\usepackage{tabularx}
+\usepackage{appendix} %Take a wild guess slick
+
+%KEEP THIS ONE LAST it's quite buggy, it allows you to click on links within the pdf and web links without changing the colour. The mouse cursor simply changes its icon to indicate to the user. Great tool - still awkward
+\usepackage[hidelinks]{hyperref}
+
+
+
+%This will tell the compiler to do the header style, page and spacing between the header and text
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.2pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT STARTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\groupid}{GRP\_123}
+\newcommand{\projectname}{Project Name}
+
+
+\newcommand{\authors}
+{
+{{ cookiecutter.author_name }} - 00000000\\
+Name of Teammate 2 (and their NetID)\\
+Name of Teammate 3 (and their NetID)\\
+Name of Teammate 4 (and their NetID)\\
+}
+
+
+
+
+%Lets begin the document, some chapters have examples in to give you an idea 
+\begin{document}
+
+\include{frontpage}
+
+
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+% \vspace{2cm}
+Include a summary of your project setting.
+
+
+\section*{Propositions}
+List of the propositions used in the model, and their (English) interpretation.
+
+
+\section*{Constraints}
+List of constraint types used in the model and their (English) interpretation. You only need to provide one example for each constraint type: e.g., if you have constraints saying “cars have one colour assigned” in a car configuration setting, then you only need to show the constraints for a single car. Essentially, we want to see the pattern for all of the types of constraints, and not every constraint enumerated.
+
+
+\section*{Model Exploration}
+List all the ways that you have explored your model – not only the final version, but intermediate versions as well. See (C3) in the project description for ideas.
+
+
+\section*{First-Order Extension}
+Describe how you might extend your model to a predicate logic setting, including how both the propositions and constraints would be updated. There is no need to implement this extension!
+
+
+\section*{Useful Notation}
+Feel free to copy/paste the symbols here and remove this section before submitting.
+
+\[ \wedge \hspace{4mm} \vee \hspace{4mm} \neg \hspace{4mm} \rightarrow \hspace{4mm} \forall \hspace{4mm} \exists \]
+
+
+\end{document}
