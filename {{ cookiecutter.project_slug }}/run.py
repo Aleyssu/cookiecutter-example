@@ -1,11 +1,11 @@
 
 from bauhaus import Encoding, proposition, constraint
 from bauhaus.utils import count_solutions, likelihood
-
+{% if cookiecutter.sat_solver == "kissat" %}
 # These two lines make sure a faster SAT solver is used.
 from nnf import config
 config.sat_backend = "kissat"
-
+{% endif %}
 # Encoding that will store all of your constraints
 E = Encoding()
 

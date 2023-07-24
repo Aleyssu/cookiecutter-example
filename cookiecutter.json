@@ -6,9 +6,28 @@
 	"author_name": "Unnamed",
 	"year": "{% now 'utc', '%Y' %}",
 	
-	"include_propositional_logic_modelling_support": ["n", "y"],
+	"include_bauhaus": ["n", "y"],
+	"sat_solver": ["default", "kissat"],
+	"include_model_counting_support": ["n", "y"],
 	"include_documentation_templates": ["word", "latex", "both"],
 	"include_static_type_checking_support": ["none", "mypy", "pytype"],
 	"include_string_markup_support": ["none", "sty", "chalky"],
-	"include_linting_support": ["none", "pylint", "flake8"]
+	"include_linting_support": ["none", "pylint", "flake8"],
+	
+	"__prompts__": {
+		"course_code": "Course code",
+		"project_name": "Project name",
+		"project_slug": "Project slug",
+		"university_name": "Unknown University",
+		"author_name": "Author name",
+		"year": "Year",
+		
+		"include_bauhaus": "Include Bauhaus for propositional logic modelling?",
+		"sat_solver": "Choose your sat solver (kissat requires docker)",
+		"include_model_counting_support": "Include Dsharp for model counting support? (requires docker)",
+		"include_documentation_templates": "Choose your documentation template types",
+		"include_static_type_checking_support": "Include static type checking support?",
+		"include_string_markup_support": "Include string markup support?",
+		"include_linting_support": "Include linting support?"
+	}
 }

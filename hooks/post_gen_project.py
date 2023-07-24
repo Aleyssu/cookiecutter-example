@@ -5,16 +5,16 @@ from pathlib import Path
 REMOVE_PATHS = []
 MOVE_PATHS = []
 
-# Dsharp, which is required for bauhaus (a propositional logic modelling python library), 
-# requires Docker to run on Windows. If we're not using bauhaus, then we don't need Docker 
-# at all and can remove it from the generated project.
-if "{{ cookiecutter.include_propositional_logic_modelling_support }}" == "n":
-    REMOVE_PATHS += ["Dockerfile", "run.py", "test.py"]
-    
+# Dsharp and kissat require Docker to run on Windows. If we're not using either, 
+# then we don't need Docker at all and can remove it from the generated project.
+if "{{ cookiecutter.include_model_counting_support }}" == "n" and "{{ cookiecutter.sat_solver }}" == "default":
+    REMOVE_PATHS.append("Dockerfile")
 # If we're using Docker, then all the required libraries will be installed in the Docker 
 # container so we won't need to have the requirements.txt.
 else:
     REMOVE_PATHS.append("requirements.txt")
+if "{{ cookiecutter.include_bauhaus }}" == "n":
+    REMOVE_PATHS += ["run.py", "test.py"]
 
 if "{{ cookiecutter.include_documentation_templates }}" == "word":
     REMOVE_PATHS.append("documents/docs.tex")
