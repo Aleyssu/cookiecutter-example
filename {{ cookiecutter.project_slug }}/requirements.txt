@@ -1,12 +1,9 @@
 {% if cookiecutter.include_bauhaus == "y" %}bauhaus==1.1.4
 nnf==0.4.1
-{% endif %}
-{% if cookiecutter.include_static_type_checking_support == "mypy" %}mypy==1.4.1
+{% endif %}{% if cookiecutter.include_static_type_checking_support == "mypy" %}mypy==1.4.1
 {% elif cookiecutter.include_static_type_checking_support == "pytype" %}pytype==2023.6.16
-{% endif %}
-{% if cookiecutter.include_string_markup_support == "sty" %}sty==1.0.4
+{% endif %}{% if cookiecutter.include_string_markup_support == "sty" %}sty==1.0.4
 {% elif cookiecutter.include_string_markup_support == "chalky" %}chalky==1.0.0
-{% endif %}
-{% if cookiecutter.include_linting_support == "pylint" %}pylint==2.17.4
+{% endif %}{% if cookiecutter.include_linting_support == "pylint" %}pylint==2.17.4
 {% elif cookiecutter.include_linting_support == "flake8" %}flake8==6.0.0
 {% endif %}

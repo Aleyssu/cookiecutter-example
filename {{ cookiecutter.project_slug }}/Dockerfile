@@ -13,14 +13,11 @@ WORKDIR /PROJECT
 RUN pip3 install --upgrade pip
 {% if cookiecutter.include_bauhaus == "y" %}RUN pip3 install nnf
 RUN pip3 install bauhaus
-{% endif %}
-{% if cookiecutter.include_static_type_checking_support == "mypy" %}RUN pip3 install mypy
+{% endif %}{% if cookiecutter.include_static_type_checking_support == "mypy" %}RUN pip3 install mypy
 {% elif cookiecutter.include_static_type_checking_support == "pytype" %}RUN pip3 install pytype
-{% endif %}
-{% if cookiecutter.include_string_markup_support == "sty" %}RUN pip3 install sty
+{% endif %}{% if cookiecutter.include_string_markup_support == "sty" %}RUN pip3 install sty
 {% elif cookiecutter.include_string_markup_support == "chalky" %}RUN pip3 install chalky
-{% endif %}
-{% if cookiecutter.include_linting_support == "pylint" %}RUN pip3 install pylint
+{% endif %}{% if cookiecutter.include_linting_support == "pylint" %}RUN pip3 install pylint
 {% elif cookiecutter.include_linting_support == "flake8" %}RUN pip3 install flake8
 {% endif %}
 # install dsharp to run in the container
