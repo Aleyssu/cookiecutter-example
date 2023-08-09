@@ -26,7 +26,7 @@
 		"sat_solver": "Choose your sat solver (kissat requires docker)",
 		"include_model_counting_support": "Include Dsharp for model counting support? (requires docker)",
 		"include_documentation_templates": "Choose your documentation template types",
-		"include_static_type_checking_support": "Include static type checking support?",
+		"include_static_type_checking_support": "Include static type checking support? (pytype requires wsl)",
 		"include_string_markup_support": "Include string markup support?",
 		"include_linting_support": "Include linting support?"
 	}

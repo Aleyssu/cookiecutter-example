@@ -10,8 +10,10 @@ Change this README.md file to summarize your project, and provide pointers to th
 {% if cookiecutter.include_bauhaus == "y" %}* `run.py`: General wrapper script that you can choose to use or not. Only requirement is that you implement the one function inside of there for the auto-checks.
 * `test.py`: Run this file to confirm that your submission has everything required. This essentially just means it will check for the right files and sufficient theory size.
 {% endif %}{% if cookiecutter.include_model_counting_support == "n" and cookiecutter.sat_solver == "default" %}
-## Installing dependencies
-Run `python -m pip install -r requirements.txt` in the main folder to install all the dependencies.{% else %}
+## Installing dependencies{% if cookiecutter.include_static_type_checking_support == "pytype" %}
+Pytype on Windows requires WSL - refer to https://pypi.org/project/pytype/ for manual installation if you're running on Windows.
+
+{% endif %}Run `python -m pip install -r requirements.txt` in the main folder to install all the dependencies.{% else %}
 ## Running With Docker
 
 By far the most reliable way to get things running is with [Docker](https://www.docker.com). This section runs through the steps and extra tips to running with Docker. You can remove this section for your final submission, and replace it with a section on how to run your project.
